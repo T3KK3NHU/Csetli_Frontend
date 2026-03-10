@@ -1,0 +1,29 @@
+.background {
+    background-image: linear-gradient(#6D6C6C, #222121);
+    min-height: 100vh;
+    background-size: 500% 500%;
+    animation: move 10s alternate infinite;
+}
+
+
+@keyframes move {
+    from {
+        background-position: 0%;
+    }
+
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+.button{
+    background-image: linear-gradient(to right, #FD0303ff, #D95E2Eff);
+}
+
+.csetliColor{
+    background: linear-gradient(to right, #FD0303ff, #D95E2Eff);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
