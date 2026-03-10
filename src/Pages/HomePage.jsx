@@ -10,16 +10,27 @@ import "../style/style.css"
 export default function HomePage() {
 
     return (
-        <div className="d-flex vh-100 justify-content-center align-items-center background">
-            <div >
-                <div>
-                    <Link to="/registration" className=" text-decoration-none csetliColor">Regisztráció</Link>
-                </div>
-                <div>
-                    <Link to="/login" className=" text-decoration-none csetliColor">Bejelentkezés</Link>
+        <>
+            <div className="d-flex vh-100 justify-content-center align-items-center background">
+                <div >
+                    <div>
+                        <img src={csetliLogo} alt="csetliLogo" width={400}/>
+                    </div>
+
+                    <div>
+                        <Link to="/registration" className=" text-decoration-none csetliColor">Regisztráció</Link>
+                    </div>
+
+                    <div>
+                        <Link to="/login" className=" text-decoration-none csetliColor ">Bejelentkezés</Link>
+                    </div>
+
+                    <div>
+                        <Link to="/about" className=" text-decoration-none csetliColor ">Rólunk</Link>
+                    </div>
+
                 </div>
             </div>
-        </div>
-
+        </>
     )
 }        

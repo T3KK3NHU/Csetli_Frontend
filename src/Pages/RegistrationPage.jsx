@@ -5,7 +5,7 @@ import Button from "../Components/Button"
 import { regisztracio } from "../api";
 import { Link } from "react-router-dom";
 import csetliLogo from "../kepek/csetli.png";
-import Profilkep from "../kepek/search.webp";
+import Profilkep from "../kepek/csetlikereso.svg";
 import "../style/style.css"
 
 export default function RegistrationPage() {
@@ -18,18 +18,18 @@ export default function RegistrationPage() {
 
 
     return (
-        <div className="background">
+        <div className="background ">
             <div className="vh-100 d-flex justify-content-center align-items-center ">
                 <div> <img src={csetliLogo} alt="CsetliLogo" /> </div>
 
-                <div style={{ minWidth: 500 }}>
+                <div style={{ minWidth: 400 }}>
                     <div className="text-center fs-1 csetliColor">Regisztráció</div>
                     <TextBox title={"Felhasználónév"} type={"text"} placeholder={"Felhasználóneved"} value={felhasználonev} setValue={setFelhasznalonev} />
                     <TextBox title={"E-mail"} type={"email"} placeholder={"Email cim"} value={email} setValue={setEmail} />
                     <TextBox title={"Jelszó"} type={"password"} placeholder={"********"} value={jelszo} setValue={setJelszo} />
                     <TextBox title={"Jelszó megerősítés"} type={"password"} placeholder={"********"} value={jelszo2} setValue={setJelszo2} />
 
-                    <div className="text-center mt-2">
+                    <div className="text-center mt-2 m-2">
                         <Button content={"Regisztrálok"} onClick={async () => {
                             if (!email || !felhasználonev || !jelszo || !jelszo2) {
                                 return alert("Hiányos beviteli adat(ok)!")
@@ -43,14 +43,17 @@ export default function RegistrationPage() {
                                 // navigálás a bejelentkezésbe
                                 <Link to="/login" className="text-dark button"></Link>
                             }
-                        }} />
+                        }}/>
                     </div>
-                    <div className="text-center mt-3">
+                    <div className="text-center mt-2">
                         <Link to="/login" className="csetliColor text-decoration-none">Van fiókom</Link>
                     </div>
+                    <div className="text-center mt-2">
+                        <Link to="/" className="csetliColor text-decoration-none">Vissza a főoldalra</Link>
+                    </div>
                 </div>
-                <div>
-                    <div>
+                <div style={{ minWidth:400}}>
+                    <div className="text-center mt-1 ">
                         <img src={Profilkep} alt="Itt tölts fel profilképet" width={200}/>
                             <div>
                                 <Button content={"Feltöltés"} value={kep} setValue={setKep} />
