@@ -29,7 +29,7 @@ export default function RegistrationPage() {
                     <TextBox title={"Jelszó"} type={"password"} placeholder={"********"} value={jelszo} setValue={setJelszo} />
                     <TextBox title={"Jelszó megerősítés"} type={"password"} placeholder={"********"} value={jelszo2} setValue={setJelszo2} />
 
-                    <div className="text-center mt-2 m-2">
+                    <div className="text-center m-2 csetliColor">
                         <Button content={"Regisztrálok"} onClick={async () => {
                             if (!email || !felhasználonev || !jelszo || !jelszo2) {
                                 return alert("Hiányos beviteli adat(ok)!")

@@ -22,7 +22,11 @@ export default function AboutusPage() {
                 <img src={csetliLogo} alt="CsetliLogo" />
             </div>
             <div className="d-flex  justify-content-center align-items-center text-white ">Rólunk: OLvassá</div>
+            <div className="text-center mt-2">
+                <Link to="/" className="csetliColor text-decoration-none m-3">Vissza a főoldalra</Link>
+            </div>
         </div>
+
 
     )
 }

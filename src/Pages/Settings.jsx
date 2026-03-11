@@ -1,13 +1,13 @@
 import Navbar from "../Components/Navbar";
-import simplehaz from "../kepek/pirosHaz.png"
-import messages from "../kepek/message.png"
-import settings from "../kepek/fillSettings.png"
-import people from "../kepek/people.png"
+import simplehaz from "../kepek/feketeHaz.svg"
+import messages from "../kepek/feketeKomment.svg"
+import settings from "../kepek/feketeSettings.svg"
+import people from "../kepek/feketePeople.svg"
 
 export default function Settings() {
 
     return (
-        <div>
+        <div className="background">
                 <Navbar homeI={simplehaz} messagesI={messages} settingsI={settings} peopleI={people}/>
                 <div>EZ EGY BEÁLLITAS??</div>
         </div>
