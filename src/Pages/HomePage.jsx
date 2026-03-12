@@ -7,32 +7,47 @@ import csetliLogo from "../kepek/csetli.png";
 import Profilkep from "../kepek/search.webp";
 import "../style/style.css"
 import useLanguage from "../language";
+import Language from "../Components/Lanugage";
 
 export default function HomePage() {
     const lang = useLanguage("0")
 
     return (
-        <div className="background">
+
+        <div className="d-flex vh-100 justify-content-center align-items-center background">
+
             <div>
-                <div  className="d-flex vh-100 justify-content-center align-items-center ">
-                    <div>
-                        <img src={csetliLogo} alt="csetliLogo" width={400} />
-                    </div>
 
-                    <div>
-                        <Link to="/registration" className=" text-decoration-none csetliColor">{lang.registration}</Link>
-                    </div>
-
-                    <div>
-                        <Link to="/login" className=" text-decoration-none csetliColor ">{lang.login}</Link>
-                    </div>
-
-                    <div>
-                        <Link to="/about" className=" text-decoration-none csetliColor ">{lang.abautus}</Link>
-                    </div>
-
+                <div>
+                    <img src={csetliLogo} alt="csetliLogo" width={400} />
                 </div>
+
+
+                <div>
+                    <Link to="/registration" className=" text-decoration-none csetliColor">{lang.registration}</Link>
+                </div>
+
+                <div>
+                    <Link to="/login" className=" text-decoration-none csetliColor ">{lang.login}</Link>
+                </div>
+
+                <div>
+                    <Link to="/about" className=" text-decoration-none csetliColor ">{lang.abautus}</Link>
+                </div>
+                <div>
+                    <Button content={"Language"} onClick={async ()=>{
+                        if(lang="0"){
+                            lang="1"
+                        } 
+                        
+                        if (lang="1") {
+                            lang="0"
+                        }
+                    }}/>
+                </div>
+
             </div>
         </div>
+
     )
 }        
