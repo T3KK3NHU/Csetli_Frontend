@@ -13,9 +13,8 @@ export default function HomePage() {
 
     return (
         <div className="background">
-
             <div>
-                <div className="d-flex vh-100 justify-content-center align-items-center ">
+                <div  className="d-flex vh-100 justify-content-center align-items-center ">
 
                     <div>
                         <img src={csetliLogo} alt="csetliLogo" width={400} />
